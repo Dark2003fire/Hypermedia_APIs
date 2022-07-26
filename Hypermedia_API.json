@@ -1,0 +1,66 @@
+{
+    "users":[
+
+        {
+            "id":8865,
+            "firstName": "Hitesh",
+            "lastName" : "Jha",
+
+            "_links": {
+                    "update" : {
+                        "description" : "edit the user" ,
+                        "href" : "/api/users/8865",
+                        "methods" : ["put", "patch"]
+
+                    },
+
+                    "delete" : {
+                            "description":"delete the user",
+                            "href" :"api/users/8865",
+                            "methods": ["delete"]
+
+
+                    },
+
+                    "message" :{
+                        "description":"message the user",
+                        "href" :"api/message/users/8865",
+                        "methods" :["post"]
+
+
+                }
+            }
+
+        }
+    ]
+}
+
+
+{
+    "_links":{
+        "beginning":{
+            "description" : "first page",
+            "href" :"/api/users?page=1",
+            "methods" : ["get"]
+        },
+        "prev":{
+            "description" : "previous page" ,
+            "href" :"/api/users? page=4",
+            "methods":["get"]
+        },
+        "next":{
+            "description":"last page" ,
+            "href" :"/api/users?page=6",
+            "methods" : ["get"]
+
+        },
+        "last" :{
+            "description" :"last page",
+            "href" : "/api/users?page=9",
+            "methods":["get"]
+
+        }
+    }
+}
+
+
