@@ -1,0 +1,112 @@
+/*
+
+
+HAL is an older spec to be easily consumed
+across multiple formats including XML and JSON. One of the key strengths
+of HAL is that it is nestable, meaning that _links can be incorporated within
+each item of a collection. HAL also incorporates CURIES, a feature that
+makes it unique in that it allows for inclusion of documentation links in the
+Weaknesses: Strengths:  response, though they are tightly coupled to the link name. HAL is one of
+the most supported and widely used hypermedia specs out there today,
+and is supported by a strong and vocal community
+
+
+*/
+
+
+
+{
+    "_links" : {
+
+        "self" : {
+                "href" : "/orders"
+
+        },
+        "curies" : [{
+                "name" : "hj",     "href":
+                "http://example.com/docs/rels/{rel}", "templated" : true
+
+        }],
+
+        "next" :{
+            "href":"/orders?page=2"
+        },
+        "hj.find" :{
+            "href" : "/orders:{?id}",
+            "templated" : true
+
+        },
+        "hj.admin" : [{
+
+            "href" : "/admins/2",
+            "title" :"Darling in the franxx"
+
+        },
+        {
+            "href":"/admins/5",
+            "title" :"DeathNote"
+        }]
+
+
+
+        },
+        "currentlyProcessing" : 14,
+        "shippedToday" : 20,
+        "_embedded" : {
+            "hj.order" : [{
+                "links" : {
+                    "self" : {
+                        "href" : "/orders/985"
+                    },
+                    "hj.basket" :{
+                        "href" : "/baskets/8865"
+                    },
+                    "hj.customer" : {
+                        "href" : "/orders/2006"
+                    }
+
+                },
+                "total" : 30.00,
+                "currency" : "USD",
+                "status"   : "shipped"
+
+            },
+            {
+                "_links" : {
+
+                    "self" : {
+                        "href" : "/orders/124"
+                    },
+                    "hj.basket" : {
+                        "href": "/baskets/543256"
+                    },
+                    "hj.customer" : {
+                        "href" : "/customers/342006"
+                    },
+
+                    "total" : 20.00,
+                    "currency" : "USD" ,
+                    "status" : "processing"
+
+
+            }
+
+
+           }]
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+}
