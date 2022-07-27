@@ -1,0 +1,41 @@
+/*
+JSON API is a newer specIt was designed to ensure separation between clients and servers (an
+important aspect of REST) while also minimizing the number of requests
+without compromising readability, flexibility or discovery. JSON API has
+quickly become a favorite, receiving wide adoption, and is arguably one of
+the leading specs for JSON-based RESTful APIs. JSON API currently bears
+a warning that it is a work in progress, and while widely adopted, it is not
+necessarily stable
+
+*/
+
+
+
+{
+    "links" : {
+        "posts.author" : {
+            "href" : "http://example.com/people{posts.author}",
+            "type" : "people"
+
+        },
+        "posts.comments" : {
+            "href" :
+            "http://example.com/comments/{posts.comments}",
+            "tyepe" :"comments"
+        }
+
+
+    },
+
+    "posts" : [ {
+        "id" : "1",
+        "title" : "DeathNote" ,
+        "links" : {
+            "author" : "9",
+            "comments" : ["5","12","17","20"]
+
+        }
+
+
+    }]
+}
