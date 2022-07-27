@@ -1,0 +1,108 @@
+/*
+Collection+JSON is a JSON-based read/write hypermedia-type designed
+to support the management and querying  of simple collections. It’s based on the Atom Publication and Syndication
+specs, defining both in a single spec and supporting simple queries through
+the use of templates.
+
+
+*/
+
+
+{
+    "Collection" :
+    {
+        "Version" : "1.0",
+        "href" : "http://example.org/freinds",
+        "links" : [
+            {
+                "rel" :                  "feed" ,                     "href" :
+                "http://example.org/freinds/rss"
+
+            },
+            {
+                "rel" :                    "queries" ,                 "href" :
+                "http://example.org/freinds/?queries"
+
+            },
+            {
+                "rel" :                      "template" ,               "href" :
+                "http://example.org//?template"
+
+            }
+
+
+        ],
+
+
+        "items" : [
+            {
+                "href" : "http://example.org/freinds/Hitesh" ,
+                "data" : [
+                    {
+                        "name" : "full-name" , "value" : "H. Jha" ,
+                        "prompt" : "Full Name"
+
+                    },
+                    {
+                        "name" : "email" , "value" :  "hjha03144@gmail.com",
+                        "prompt" : "Email"
+
+                    }
+
+                ],
+
+
+                "links" : [
+                    {
+
+                        "rel"         :       "blog" ,                    "href"          :
+                        "http://examples.org/blogs/Hitesh" , "prompt" : "Blog"
+
+                    },
+
+                    {
+                        "rel"          :       "avatar",                   "href"     :
+                        "http://examples.org/images/Hitesh" , "prompt"  :   "Avatar"  ,
+                        "render"  : "image"
+
+
+                    }
+
+
+                ]
+
+
+
+            }
+
+        ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
